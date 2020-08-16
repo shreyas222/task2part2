@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>register here</title>
+</head>
+<body>
+	
+	<h2>{{i}}</h2>
+	
+
+	<div>
+	<form method="POST">
+			{% csrf_token %}
+			 
+			 <div>
+
+	          <label>username</label>
+	          <input type="text" name="username"placeholder="enter a name">
+	         </div>
+	         <br>
+
+	         <div>
+	          <label>first name</label>
+	          <input type="text" name="f_name"placeholder="enter a name">
+	         </div>
+	          <br>    
+     
+		     <div>
+
+		          <label>last name</label>
+		          <input type="text" name="l_name">
+
+		     </div>
+		      <br>    
+		     
+		     <div>
+
+		          <label>email</label>
+		          <input type="email" name="email">
+		     </div>
+		      <br>
+		      <div>
+		          <label>phone number</label>
+		          <input type="number" name="P_number" >
+		     </div> 
+		      <br> 
+		      <div>
+
+		          <label>password</label>
+		          <input type="password" name="password1">
+		     </div>
+		      <br>
+		      <div>
+
+		          <label>confirm password</label>
+		          <input type="password" name="password2">
+		     </div>
+		      <br>    
+		     
+		     <div>
+					<div>
+		        	   <button type="submit">"sign up"</button>
+		            </div>
+        </form>
+        <br>
+        <div>
+        	<small>
+        		Already have a account?<a href="{% url 'login' %}">Sign in</a>
+        	</small>
+        </div>
+        
+
+	</div>
+
+</body>
+</html>

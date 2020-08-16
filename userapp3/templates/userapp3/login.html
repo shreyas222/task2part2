@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login here</title>
+</head>
+<body>
+    <h2>{{i}}</h2>
+	
+	<div>
+		<form method="POST">
+			{% csrf_token %}
+			<div>
+              <label>username</label>
+              <input type="text" name="username"placeholder="username">
+                
+            </div>
+            <br>
+            <div>
+
+                  <label>password</label>
+                  <input type="password" name="password" placeholder="password">
+             </div>
+                
+            <div>
+        	   <button type="submit">"login"</button>
+            </div>
+        </form>
+        <br>
+        <div>
+        	<small>
+        		Need a account?<a href="{% url 'signup' %}">Sign up</a>
+        	</small>
+        </div>
+        
+
+	</div>
+
+</body>
+</html>
